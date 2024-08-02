@@ -1,0 +1,24 @@
+<!-- header -->
+<app-header (search)="onSearch($event)"></app-header>
+<!-- Loding -->
+<div *ngIf="loading">Loading...</div>
+<!-- Users List -->
+<div *ngIf="!loading" class="users-list">
+  <!-- Users list container -->
+  <div class="users-list-container">
+    <app-user-card
+      *ngFor="let user of filteredUsers"
+      [user]="user"
+      (viewDetails)="onUserDetails($event)"
+    >
+    </app-user-card>
+    <span *ngIf="userNotFound" class="not-found">User not found</span>
+  </div>
+  <!-- Pagination -->
+  <app-pagination
+    [currentPage]="currentPage"
+    [totalPages]="totalPages"
+    (pageChange)="onPageChange($event)"
+  >
+  </app-pagination>
+</div>

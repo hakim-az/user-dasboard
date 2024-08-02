@@ -1,0 +1,26 @@
+.users-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: end;
+  padding-bottom: 80px;
+}
+
+.users-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+  padding: 200px 0 80px;
+  width: 100%;
+}
+
+.not-found {
+  font-size: 4rem;
+  font-family: sans-serif;
+}
